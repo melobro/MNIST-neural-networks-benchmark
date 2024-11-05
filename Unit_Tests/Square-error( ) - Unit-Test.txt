@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double square_error() {
+ double result = 0.0;
+ int output[3] = {10, 20, 30};
+ int expected[3] = {15 , 20, 25};
+ for (int i = 1; i < 4; ++i) {
+ result += (output[i] - expected[i]) * (output[i] - expected[i]);
+}
+ return result;
+}
+
+int main()
+{
+    double a = square_error();
+    cout << a << endl;
+
+    return 0;
+}

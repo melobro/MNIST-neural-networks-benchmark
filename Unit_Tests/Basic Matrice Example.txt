@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <conio.h>
+//
+void main(){
+
+int matrix[3][3]={{12,13,14},{15,16,17},{18,19,11}};
+int transpose[3][3];
+int i,j;
+
+
+printf("\n\nThe Given Matrix: \n");
+
+for(i=0;i<3;i++){
+	for(j=0;j<3;j++){
+
+		printf("%d  ",matrix[i][j]);
+
+		}
+
+	   printf("\n");
+	}
+
+printf("\n\nThe Transposed Matrix: \n");
+
+for(i=0;i<3;i++){
+	for(j=0;j<3;j++){
+
+		transpose[i][j]=matrix[j][i];
+
+		printf("%d  ",transpose[i][j]);
+
+			}
+	printf("\n");
+
+	}
+
+getch();
+
+}

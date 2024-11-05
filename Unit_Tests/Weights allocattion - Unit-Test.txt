@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int A[] = {1, 2, 3, 4, 5};
+    int B[] = {10, 20, 30, 40, 50};
+    int result[5][5];
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            result[i][j] = A[i] * B[j];
+        }
+    }
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            std::cout << result[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+

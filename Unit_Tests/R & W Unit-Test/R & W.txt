@@ -1,0 +1,41 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main() {
+    std::string inputFileName = "input.txt";   // Change to the name of your input file
+    std::string outputFileName = "output.txt"; // Change to the name of your output file
+
+    // Open the input file for reading
+    std::ifstream inputFile(inputFileName);
+
+    // Check if the input file is open
+    if (!inputFile.is_open()) {
+        std::cerr << "Failed to open the input file." << std::endl;
+        return 1;
+    }
+
+    // Open the output file for writing
+    std::ofstream outputFile(outputFileName);
+
+    // Check if the output file is open
+    if (!outputFile.is_open()) {
+        std::cerr << "Failed to open the output file." << std::endl;
+        return 1;
+    }
+
+    // Read and print each line from the input file and write it to the output file
+    std::string line;
+    while (std::getline(inputFile, line)) {
+        std::cout << line << std::endl; // Print to console
+        outputFile << line << std::endl; // Write to output file
+    }
+
+    // Close both input and output files
+    inputFile.close();
+    outputFile.close();
+
+    std::cout << "File contents have been read and written to another file." << std::endl;
+
+    return 0;
+}
